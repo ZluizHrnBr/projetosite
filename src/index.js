@@ -3,11 +3,37 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ListaProdutos from './Routes/ListaProdutos';
+import Editar from './Routes/Editar';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { UsuarioContextProvider } from './Context/UsuarioContext';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App/>
+  },
+  {
+    path: '/ListaProdutos',
+    element: <ListaProdutos />,
+  },
+  {
+    path: '/Editar/:Nome_Produto',
+    element: <Editar />
+  }
+
+])
+
+
 root.render(
   <React.StrictMode>
-    <App />
+    <UsuarioContextProvider>
+        <RouterProvider router={router}/>
+    </UsuarioContextProvider>
   </React.StrictMode>
 );
 

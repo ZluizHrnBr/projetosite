@@ -1,0 +1,28 @@
+#titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center; 
+}
+
+
+#buttonLogin {
+    margin: 5px 5px 5px 5px;
+}
+
+#formLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cardLogin {
+    color: black;
+    background-color: cyan
+}
+
+#inputUser:hover {
+    background-color: yellow;
+}
+
+#inputUser2:hover {
+    background-color: yellow;
+}
